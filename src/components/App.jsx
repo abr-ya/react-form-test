@@ -4,7 +4,7 @@ import CommentList from 'components/CommentList';
 
 // eslint-disable-next-line react/display-name
 export default () => {
-  console.log('App');
+  // console.log('App');
 
   return (
     <div className="App">

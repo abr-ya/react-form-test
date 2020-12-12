@@ -1,6 +1,6 @@
 import React from 'react';
-import CommentBox from './CommentBox';
-import CommentList from './CommentList';
+import CommentBox from 'components/CommentBox';
+import CommentList from 'components/CommentList';
 
 // eslint-disable-next-line react/display-name
 export default () => {

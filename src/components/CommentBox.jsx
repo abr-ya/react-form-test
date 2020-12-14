@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
+import {connect} from 'react-redux';
+import * as actions from 'actions';
 
-const CommentBox = () => {
+// eslint-disable-next-line react/prop-types
+const CommentBox = ({saveComment}) => {
   const [comment, setComment] = useState('');
 
   const formHandler = (e) => {
     e.preventDefault();
     console.log('send', comment);
+    saveComment(comment);
     setComment('');
   };
 
@@ -25,5 +29,4 @@ const CommentBox = () => {
   );
 };
 
-export default CommentBox;
-
+export default connect(null, actions)(CommentBox);

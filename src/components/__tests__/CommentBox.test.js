@@ -1,11 +1,16 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import CommentBox from 'components/CommentBox';
+import WithRedux from 'WithRedux';
 
 let component;
 
 beforeEach(() => {
-  component = mount(<CommentBox />);
+  component = mount(
+      <WithRedux>
+        <CommentBox />
+      </WithRedux>,
+  );
 });
 
 afterEach(() => {

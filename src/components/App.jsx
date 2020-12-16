@@ -9,7 +9,6 @@ export default () => {
   return (
     <div className="App">
       <p>Hello, World!)</p>
-      <p>Простое приложение для тестов!</p>
       <CommentBox />
       <CommentList />
     </div>

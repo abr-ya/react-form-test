@@ -8,7 +8,7 @@ const CommentBox = ({saveComment}) => {
 
   const formHandler = (e) => {
     e.preventDefault();
-    console.log('send', comment);
+    // console.log('send', comment);
     saveComment(comment);
     setComment('');
   };

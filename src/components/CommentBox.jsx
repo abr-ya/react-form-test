@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import * as actions from 'actions';
 
 // eslint-disable-next-line react/prop-types
-const CommentBox = ({saveComment}) => {
+const CommentBox = ({saveComment, fetchComments}) => {
   const [comment, setComment] = useState('');
 
   const formHandler = (e) => {
@@ -14,18 +14,23 @@ const CommentBox = ({saveComment}) => {
   };
 
   return (
-    <form onSubmit={formHandler}>
-      <h4>Add a Comment</h4>
-      <textarea
-        value={comment}
-        onChange={(e) => {
-          setComment(e.target.value);
-        }}
-      />
-      <div>
-        <button>Submit Comment</button>
-      </div>
-    </form>
+    <div>
+      <form onSubmit={formHandler}>
+        <h4>Add a Comment</h4>
+        <textarea
+          value={comment}
+          onChange={(e) => {
+            setComment(e.target.value);
+          }}
+        />
+        <div>
+          <button>Submit Comment</button>
+        </div>
+      </form>
+      <button onClick={fetchComments}>
+        Fetch Comments
+      </button>
+    </div>
   );
 };
 

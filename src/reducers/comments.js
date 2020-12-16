@@ -1,4 +1,4 @@
-import {SAVE_COMMENT} from 'actions/types';
+import {SAVE_COMMENT, FETCH_COMMENTS} from 'actions/types';
 
 const initialState = ['Первый комментарий', 'Второй комментарий'];
 
@@ -6,7 +6,10 @@ const initialState = ['Первый комментарий', 'Второй ко�
 export default function(state = initialState, action) {
   switch (action.type) {
     case SAVE_COMMENT:
-      return [...state, action.payload];
+      return [action.payload, ...state];
+    case FETCH_COMMENTS:
+      const comments = action.payload.data.map((comment) => comment.name);
+      return [...state, ...comments];
     default:
       return state;
   };

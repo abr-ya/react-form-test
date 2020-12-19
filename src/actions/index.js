@@ -12,7 +12,7 @@ export function saveComment(comment) {
 // request to API
 export function fetchComments() {
   const response = axios.get('http://jsonplaceholder.typicode.com/comments');
-  console.log(response);
+  // console.log(response); // здесь промис - ридакс с reduxPromise разберется!
 
   return {
     type: FETCH_COMMENTS,

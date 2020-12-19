@@ -2,15 +2,12 @@ import React from 'react';
 import CommentBox from 'components/CommentBox';
 import CommentList from 'components/CommentList';
 
-// eslint-disable-next-line react/display-name
-export default () => {
-  // console.log('App');
+const App = () => (
+  <div className="App">
+    <p>Hello, World!)</p>
+    <CommentBox />
+    <CommentList />
+  </div>
+);
 
-  return (
-    <div className="App">
-      <p>Hello, World!)</p>
-      <CommentBox />
-      <CommentList />
-    </div>
-  );
-};
+export default App;
